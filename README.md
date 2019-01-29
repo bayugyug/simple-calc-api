@@ -17,20 +17,61 @@
 		install Dancer2
 		
 		
+
+### Prepare
+
 ```sh
+
+	 #unzip the file simple-calc-api-master.zip
+	 unzip simple-calc-api-master.zip && cd simple-calc-api-master/
+	 
+	 #or grab from the github
+     git clone https://github.com/bayugyug/simple-calc-api.git && cd simple-calc-api/
 
 
 ```
 
-### Download
+
+### Mini-How-To on running from the command-line
+
+
+    [x] The app can accept a few command-line-parameters
+	
+	[x] Options:
+		
+	[x] Run-as-Http-Server:
+	
+		--http      = will run the application on default port#3005
 
 ```sh
 
-     git clone https://github.com/bayugyug/simple-calc-api.git && cd simple-calc-api
+			perl -Ilib dancr.pl --http
+			 
+```		
 
 
-```
+	[x] Run-as-Command-Line:
+	
+		--cmd       = command to execute (ADD,SUB,DIV,MUL,FACTORIAL)
+		--num1      = the 1st number
+		--num2      = the 2nd number
+		
+		
+```sh
 
+			perl -Ilibs dancr.pl --cmd=ADD  --num1=10  --num2=720
+			perl -Ilibs dancr.pl --cmd=SUB  --num1=50  --num2=20
+			perl -Ilibs dancr.pl --cmd=DIV  --num1=100 --num2=25
+			perl -Ilibs dancr.pl --cmd=MUL  --num1=15  --num2=50
+			perl -Ilibs dancr.pl --cmd=FACT --num1=10
+			 
+```	
+
+
+	[x] Sanity check
+	    
+		perl -Ilibs t/01-mocktest.t
+	
 
 
 ### List of End-Points-Url
@@ -67,47 +108,6 @@
 						
 ```
 
-
-### Mini-How-To on running from the command-line
-
-
-    [x] The app can accept a few command-line-parameters
-	
-	[x] Options:
-		
-	[x] Run-as-Http-Server:
-	
-		--http      = will run the application on default port#3005
-
-```sh
-
-			perl -Ilib dancr.pl --http
-			 
-```		
-
-
-	[x] Run-as-Command-Line:
-	
-		--cmd       = command to execute (ADD,SUB,DIV,MUL,FACTORIAL)
-		--num1      = the 1st number
-		--num2      = the 2nd number
-		
-		
-```sh
-
-			perl -Ilib dancr.pl --cmd=ADD  --num1=10  --num2=720
-			perl -Ilib dancr.pl --cmd=SUB  --num1=50  --num2=20
-			perl -Ilib dancr.pl --cmd=DIV  --num1=100 --num2=25
-			perl -Ilib dancr.pl --cmd=MUL  --num1=15  --num2=50
-			perl -Ilib dancr.pl --cmd=FACT --num1=10
-			 
-```	
-
-
-	[x] Sanity check
-	    
-		perl -Ilib t/01-mocktest.t
-	
 	
 ### Notes
 
