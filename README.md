@@ -45,7 +45,7 @@
 
 ```sh
 
-			perl -Ilib dancr.pl --http
+			perl -Ilibs dancr.pl --http
 			 
 ```		
 
