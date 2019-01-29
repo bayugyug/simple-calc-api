@@ -38,20 +38,33 @@
 
 ```sh
 
-		#User Create
-		curl -v -X POST 'http://127.0.0.1:8989/v1/api/user'  -d '{
-				  "user":"ben@jerry.com",
-				  "pass":"8888"
-				  }'
-
-				  @output:
-				  
-				  {"Code":200,"Status":"Create successful","Otp":"06370","OtpExpiry":"2019-01-18 10:47:36"}
-				  
-				  
- 	
-				
-				
+		#add
+		curl -X GET 'http://127.0.0.1:3005/v1/api/add/9/20'  
+			
+			{"code":200,"result":29,"message":"Success"}
+			
+		#subtract
+		curl -X GET 'http://127.0.0.1:3005/v1/api/sub/19/4'
+			
+			{"code":200,"result":-11,"message":"Success"}
+			
+		#divide
+		curl -X GET 'http://127.0.0.1:3005/v1/api/div/15/3'
+		
+			{"message":"Success","result":5.0,"code":200}
+		
+		
+		#multiply
+		curl -X GET 'http://127.0.0.1:3005/v1/api/mul/5/82'
+		
+			{"message":"Success","code":200,"result":410}
+			
+		
+		#multiply
+		curl -X GET 'http://127.0.0.1:3005/v1/api/factorial/7'
+		
+			{"message":"Success","result":5040,"code":200}
+						
 ```
 
 
