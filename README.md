@@ -46,7 +46,7 @@
 		#subtract
 		curl -X GET 'http://127.0.0.1:3005/v1/api/sub/19/4'
 			
-			{"code":200,"result":-11,"message":"Success"}
+			{"code":200,"result":15,"message":"Success"}
 			
 		#divide
 		curl -X GET 'http://127.0.0.1:3005/v1/api/div/15/3'
